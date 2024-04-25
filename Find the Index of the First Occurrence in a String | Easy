@@ -1,0 +1,13 @@
+class Solution(object):
+    def strStr(self, haystack, needle):
+        k = 0
+        if needle in haystack:
+            haystack = haystack.replace(needle, 'S')    
+        else:
+            return -1
+        r = list(haystack)
+        for i in r:
+            if i == 'S':
+                return k
+                break
+            k += 1
