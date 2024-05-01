@@ -1,0 +1,44 @@
+class Solution(object):
+    def intToRoman(self, num):
+        r = ''
+        while num > 0:
+            if num - 1000 >= 0:
+                num -= 1000
+                r += 'M'
+            elif num - 900 >= 0:
+                num -= 900
+                r += 'CM'
+            elif num - 500 >= 0:
+                num -= 500
+                r += 'D'
+            elif num - 400 >= 0:
+                num -= 400
+                r += 'CD'
+            elif num - 100 >= 0:
+                num -= 100
+                r += 'C'
+            elif num - 90 >= 0:
+                num -= 90
+                r += 'XC'
+            elif num - 50 >= 0:
+                num -= 50
+                r += 'L'
+            elif num - 40 >= 0:
+                num -= 40
+                r += 'XL'
+            elif num - 10 >= 0:
+                num -= 10
+                r += 'X'
+            elif num - 9 >= 0:
+                num -= 9
+                r += 'IX'
+            elif num - 5 >= 0:
+                num -= 5
+                r += 'V'
+            elif num - 4 >= 0:
+                num -= 4
+                r += 'IV'
+            else:
+                num -= 1
+                r += 'I'
+        return r
