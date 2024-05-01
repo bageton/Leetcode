@@ -1,0 +1,15 @@
+class Solution(object):
+    def reversePrefix(self, word, ch):
+        rev = ''
+        k = 0
+        if ch in word:
+            for i in word:
+                k += 1
+                rev += i
+                if i == ch:
+                    break
+            word = word[k::]        
+            rev = rev[::-1]
+            return rev + word
+        else:
+            return word
