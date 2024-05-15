@@ -1,0 +1,6 @@
+class Solution(object):
+    def moveZeroes(self, nums):
+        for i in range(0, nums.count(0)):
+            a = nums.index(0)
+            nums.append(nums.pop(a))
+        return nums
