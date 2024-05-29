@@ -1,0 +1,11 @@
+class Solution(object):
+    def numSteps(self, s):
+        k = 0
+        ch = int(s, 2)
+        while ch != 1:
+            if ch % 2 == 0:
+                ch //= 2
+            else:
+                ch += 1
+            k += 1
+        return k 
