@@ -1,0 +1,8 @@
+class Solution(object):
+    def removeElement(self, nums, val):
+        try:
+            for i in range(len(nums)):
+                nums.remove(val)
+            return len(nums)
+        except:
+            return len(nums)
